@@ -12,10 +12,15 @@
 		4F78E90223C6172800A5CB98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F78E90123C6172800A5CB98 /* Assets.xcassets */; };
 		4F78E90523C6172800A5CB98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F78E90423C6172800A5CB98 /* Preview Assets.xcassets */; };
 		4F78E90823C6172800A5CB98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F78E90623C6172800A5CB98 /* LaunchScreen.storyboard */; };
-		4F78E91323C6172900A5CB98 /* GitHubViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78E91223C6172900A5CB98 /* GitHubViewerTests.swift */; };
 		4F78E92123C617B600A5CB98 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78E92023C617B600A5CB98 /* SearchViewController.swift */; };
 		4FAA103323C61A00008EC040 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAA103223C61A00008EC040 /* SearchView.swift */; };
 		4FAA103623C61BD2008EC040 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4FAA103523C61BD2008EC040 /* SnapKit */; };
+		4FD6F64423C628E6009DC978 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 4FD6F64323C628E6009DC978 /* Nimble */; };
+		4FD6F64723C62905009DC978 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 4FD6F64623C62905009DC978 /* Quick */; };
+		4FD6F64923C62963009DC978 /* SearchViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD6F64823C62963009DC978 /* SearchViewControllerSpec.swift */; };
+		4FD6F64B23C62B68009DC978 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD6F64A23C62B68009DC978 /* SearchInteractor.swift */; };
+		4FD6F64E23C649AA009DC978 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD6F64D23C649AA009DC978 /* User.swift */; };
+		4FD6F65023C64DC4009DC978 /* ViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD6F64F23C64DC4009DC978 /* ViewControllerHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +42,13 @@
 		4F78E90723C6172800A5CB98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F78E90923C6172800A5CB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F78E90E23C6172900A5CB98 /* GitHubViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F78E91223C6172900A5CB98 /* GitHubViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubViewerTests.swift; sourceTree = "<group>"; };
 		4F78E91423C6172900A5CB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F78E92023C617B600A5CB98 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4FAA103223C61A00008EC040 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		4FD6F64823C62963009DC978 /* SearchViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerSpec.swift; sourceTree = "<group>"; };
+		4FD6F64A23C62B68009DC978 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		4FD6F64D23C649AA009DC978 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4FD6F64F23C64DC4009DC978 /* ViewControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FD6F64723C62905009DC978 /* Quick in Frameworks */,
+				4FD6F64423C628E6009DC978 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +93,7 @@
 		4F78E8FA23C6172500A5CB98 /* GitHubViewer */ = {
 			isa = PBXGroup;
 			children = (
+				4FD6F64C23C6499A009DC978 /* Entities */,
 				4F78E91E23C6176400A5CB98 /* Application */,
 				4F78E90323C6172800A5CB98 /* Preview Content */,
 				4F78E91D23C6175A00A5CB98 /* Search */,
@@ -102,8 +113,9 @@
 		4F78E91123C6172900A5CB98 /* GitHubViewerTests */ = {
 			isa = PBXGroup;
 			children = (
-				4F78E91223C6172900A5CB98 /* GitHubViewerTests.swift */,
 				4F78E91423C6172900A5CB98 /* Info.plist */,
+				4FD6F64823C62963009DC978 /* SearchViewControllerSpec.swift */,
+				4FD6F64F23C64DC4009DC978 /* ViewControllerHelper.swift */,
 			);
 			path = GitHubViewerTests;
 			sourceTree = "<group>";
@@ -113,6 +125,7 @@
 			children = (
 				4F78E92023C617B600A5CB98 /* SearchViewController.swift */,
 				4FAA103223C61A00008EC040 /* SearchView.swift */,
+				4FD6F64A23C62B68009DC978 /* SearchInteractor.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -134,6 +147,14 @@
 				4F78E90923C6172800A5CB98 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4FD6F64C23C6499A009DC978 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				4FD6F64D23C649AA009DC978 /* User.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +194,10 @@
 				4F78E91023C6172900A5CB98 /* PBXTargetDependency */,
 			);
 			name = GitHubViewerTests;
+			packageProductDependencies = (
+				4FD6F64323C628E6009DC978 /* Nimble */,
+				4FD6F64623C62905009DC978 /* Quick */,
+			);
 			productName = GitHubViewerTests;
 			productReference = 4F78E90E23C6172900A5CB98 /* GitHubViewerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -207,6 +232,8 @@
 			mainGroup = 4F78E8EF23C6172500A5CB98;
 			packageReferences = (
 				4FAA103423C61BD2008EC040 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				4FD6F64223C628E6009DC978 /* XCRemoteSwiftPackageReference "nimble" */,
+				4FD6F64523C62905009DC978 /* XCRemoteSwiftPackageReference "quick" */,
 			);
 			productRefGroup = 4F78E8F923C6172500A5CB98 /* Products */;
 			projectDirPath = "";
@@ -245,8 +272,10 @@
 			files = (
 				4FAA103323C61A00008EC040 /* SearchView.swift in Sources */,
 				4F78E92123C617B600A5CB98 /* SearchViewController.swift in Sources */,
+				4FD6F64E23C649AA009DC978 /* User.swift in Sources */,
 				4F78E8FC23C6172500A5CB98 /* AppDelegate.swift in Sources */,
 				4F78E8FE23C6172500A5CB98 /* SceneDelegate.swift in Sources */,
+				4FD6F64B23C62B68009DC978 /* SearchInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F78E91323C6172900A5CB98 /* GitHubViewerTests.swift in Sources */,
+				4FD6F65023C64DC4009DC978 /* ViewControllerHelper.swift in Sources */,
+				4FD6F64923C62963009DC978 /* SearchViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +549,22 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		4FD6F64223C628E6009DC978 /* XCRemoteSwiftPackageReference "nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quick/nimble.git";
+			requirement = {
+				kind = exactVersion;
+				version = 8.0.2;
+			};
+		};
+		4FD6F64523C62905009DC978 /* XCRemoteSwiftPackageReference "quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quick/quick.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -526,6 +572,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4FAA103423C61BD2008EC040 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		4FD6F64323C628E6009DC978 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4FD6F64223C628E6009DC978 /* XCRemoteSwiftPackageReference "nimble" */;
+			productName = Nimble;
+		};
+		4FD6F64623C62905009DC978 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4FD6F64523C62905009DC978 /* XCRemoteSwiftPackageReference "quick" */;
+			productName = Quick;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
