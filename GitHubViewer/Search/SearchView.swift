@@ -17,6 +17,7 @@ class SearchView: UIView {
         let view = UITextField()
         view.placeholder = "Username"
         view.borderStyle = .roundedRect
+        view.autocapitalizationType = .none
         return view
     }()
     

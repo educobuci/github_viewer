@@ -6,9 +6,13 @@
 //  Copyright © 2020 Eduardo Cobuci. All rights reserved.
 //
 
-struct User: Codable {
+struct User: Codable, Equatable {
     let login: String
     let id: Int
-    let avatar_url: String
+    let avatarUrl: String
     let name: String
+    
+    private enum CodingKeys : String, CodingKey {
+        case login, id, avatarUrl = "avatar_url", name
+    }
 }

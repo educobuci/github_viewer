@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, SearchViewProtocol {
 
     lazy var searchView: SearchView = SearchView()
     var interactor: SearchInteractorProtocol?
@@ -29,7 +29,15 @@ class SearchViewController: UIViewController {
     
     @objc func onSearch(_ sender: UIButton) {
         if let term = searchView.searchTextField.text {
-            interactor?.search(term: term)
+            interactor?.search(user: term)
+        }
+    }
+    
+    func displayMessage(title: String, message: String) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alert, animated: false)
         }
     }
 }
